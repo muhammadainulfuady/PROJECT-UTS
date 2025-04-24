@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tagesschrift;
+  background: url("../IMG/3AkunImg/image.png") no-repeat center center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* logo */
+.logo {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* table */
+.all-table table {
+  background-color: #e9ebeb70;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  padding: 2rem;
+  border: 2px solid black;
+  margin: 2rem auto;
+}
+
+.form-group {
+  padding: 2rem;
+}
+
+.all-table tr td {
+  padding: 0.3rem;
+}
+
+/* button */
+.form .all-table .kirim {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.form .all-table .reset {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-size: 18px;
+  padding: 1px;
+  width: 140%;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
