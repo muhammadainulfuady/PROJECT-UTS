@@ -3,60 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- CSS -->
+    <title>Login Page</title>
     <link rel="stylesheet" href="../Asset/CSS/3Akun.css" />
-    <!-- FA ICON -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- FONT ICON -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <!-- CONTAINER -->
     <div class="container">
-      <div class="logo"><h1>LOGIN</h1></div>
-      <div class="form">
+      <div class="login-box">
+        <h2>WELCOME</h2>
         <form action="#" method="get">
-          <div class="all-table">
-            <table border="0" cellpadding="2" cellspacing="0">
-              <tr>
-                <td>
-                  <label for="username"
-                    ><i class="fa fa-user" aria-hidden="true"></i>Username
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="text" name="username" id="username" /></td>
-              </tr>
-              <tr>
-                <td>
-                  <label for="password"
-                    ><i class="fa fa-unlock-alt" aria-hidden="true"></i>Pasword
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="password" name="password" id="password" /></td>
-              </tr>
-              <tr>
-                <td><button type="submit" class="kirim">Login</button></td>
-                <td><button type="reset" class="reset">Reset</button></td>
-              </tr>
-            </table>
+          <div class="form-group">
+            <label for="username"><i class="fa fa-user"></i> Username</label>
+            <input type="text" name="username" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password"
+              ><i class="fa fa-unlock-alt"></i> Password</label
+            >
+            <input type="password" name="password" id="password" required />
+          </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" onclick="togglePassword()" /> Show Password
+          </div>
+          <div class="button-group">
+            <button type="submit" class="kirim">Login</button>
+            <button type="reset" class="reset">Reset</button>
           </div>
         </form>
       </div>
     </div>
-    <!-- JS -->
     <script src="../Asset/JS/3Akun.js"></script>
   </body>
 </html>

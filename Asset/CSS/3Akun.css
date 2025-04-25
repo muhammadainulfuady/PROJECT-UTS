@@ -1,65 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: Tagesschrift;
-  background: url("../IMG/3AkunImg/image.png") no-repeat center center;
+  background: linear-gradient(120deg, #2980b9, #6dd5fa);
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* logo */
-.logo {
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-top: 3rem;
 }
 
-/* table */
-.all-table table {
-  background-color: #e9ebeb70;
-  border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;
-  padding: 2rem;
-  border: 2px solid black;
-  margin: 2rem auto;
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #333;
 }
 
 .form-group {
-  padding: 2rem;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.all-table tr td {
-  padding: 0.3rem;
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
 }
 
-/* button */
-.form .all-table .kirim {
-  padding: 0.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.form .all-table .reset {
-  border-radius: 1rem;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-input[type="text"],
-input[type="password"] {
-  font-size: 18px;
-  padding: 1px;
-  width: 140%;
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.4);
+}
+
+.checkbox {
+  font-size: 14px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.kirim,
+button.reset {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.kirim {
+  background-color: #27ae60;
+}
+
+button.kirim:hover {
+  background-color: #219150;
+}
+
+button.reset {
+  background-color: #e74c3c;
+}
+
+button.reset:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
