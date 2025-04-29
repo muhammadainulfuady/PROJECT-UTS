@@ -1,20 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../Asset/CSS/3Akun.css">
-</head>
-<body>
-    <!-- Ubah Code Disini -->
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akun</title>
+    <link rel="stylesheet" href="../Asset/CSS/3Akun.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="akun-utama">
+      <div class="navbar">
+        <div class="logo">
+          <h3>
+            Welcome In Your Account
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </h3>
+          <img src="../Asset/IMG/3AkunImg/user.png" alt="" />
+        </div>
+      </div>
 
+      <div class="main">
+        <div class="card">
+          <h3>
+            Return Photo
+            <a
+              href="#"
+              onclick="document.getElementById('fileInput').click(); return false;"
+            >
+              <i class="fa fa-camera" aria-hidden="true"></i>
+            </a>
+          </h3>
+          <img
+            id="preview"
+            src="../Asset/IMG/3AkunImg/user.png"
+            alt="Foto Profil"
+          />
+        </div>
+        <!-- Input file disembunyikan -->
+        <input
+          type="file"
+          id="fileInput"
+          style="display: none"
+          accept="image/*"
+          onchange="gantiFoto(this)"
+        />
+      </div>
+    </section>
 
-    <!--  -->
-    
-    <!-- JS -->
-    <script src="../Asset/JS/3Akun.js"></script>
-</body>
+    <script>
+      // Fungsi saat memilih foto
+      function gantiFoto(input) {
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const base64 = e.target.result;
+            document.getElementById("preview").src = base64;
+            localStorage.setItem("fotoProfil", base64); // Simpan ke localStorage
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      // Saat halaman dimuat kembali, ambil foto dari localStorage
+      window.addEventListener("DOMContentLoaded", function () {
+        const saved = localStorage.getItem("fotoProfil");
+        if (saved) {
+          document.getElementById("preview").src = saved;
+        }
+      });
+    </script>
+  </body>
 </html>

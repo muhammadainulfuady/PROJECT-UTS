@@ -9,22 +9,24 @@
 
 body {
   background: linear-gradient(120deg, #2980b9, #6dd5fa);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* login */
-.container {
+.login-akun {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 400px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .login-box {
   background-color: #ffffff;
   padding: 30px;
+  width: 900px;
   border-radius: 15px;
   box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -104,4 +106,66 @@ button.reset:hover {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+/* akun */
+.navbar {
+  background-color: #00808057;
+  max-width: 100%;
+  padding: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.navbar img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.navbar h3 {
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1.5rem;
+  background-color: #ffffff5f;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #00000098;
+}
+.card {
+  background-color: #27ae5f77;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 800px;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.card i {
+  color: #00000084;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  margin-top: 1rem;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
