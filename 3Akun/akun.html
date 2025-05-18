@@ -15,7 +15,7 @@
       <div class="navbar">
         <div class="logo">
           <h3>
-            Welcome In Your Account
+            Selamat datang di akun anda
             <i class="fa fa-user" aria-hidden="true"></i>
           </h3>
           <img src="../Asset/IMG/3AkunImg/user.png" alt="" />
@@ -26,74 +26,37 @@
         <div class="card">
           <h3>
             Return Photo
-            <a
-              href="#"
-              onclick="document.getElementById('fileInput').click(); return false;"
-            >
+            <a href="#">
               <i class="fa fa-camera" aria-hidden="true"></i>
             </a>
           </h3>
-          <img
-            id="preview"
-            src="../Asset/IMG/3AkunImg/user.png"
-            alt="Foto Profil"
-          />
+          <img src="../Asset/IMG/3AkunImg/user.png" alt="Foto Profil" />
         </div>
         <!-- Input file disembunyikan -->
-        <input
-          type="file"
-          id="fileInput"
-          style="display: none"
-          accept="image/*"
-          onchange="gantiFoto(this)"
-        />
         <div class="identity">
-          <h3>Identity For User</h3>
+          <h3>Identitas Admin</h3>
           <div class="row">
-            <span class="label">Full name</span>
-            <span class="value">Muhammad Ainul Fuady</span>
+            <span class="label">Nama lengkap</span>
+            <span class="value">nlA--</span>
           </div>
 
           <div class="row">
             <span class="label">Gmail</span>
-            <span class="value">fuady@email.com</span>
+            <span class="value">gA--</span>
           </div>
 
           <div class="row">
-            <span class="label">Phone</span>
-            <span class="value">0812xxxxxxx</span>
+            <span class="label">Nomer wa</span>
+            <span class="value">nwA--</span>
           </div>
 
           <div class="row">
-            <span class="label">Address</span>
-            <span class="value">Bangkalan, Madura</span>
+            <span class="label">Alamat</span>
+            <span class="value">alA--</span>
           </div>
         </div>
       </div>
-      <div class="footer"><h5>Develop By Programmerhandal404</h5></div>
+      <div class="footer"><h5>Dibuat tanggal 18 Mei 2025</h5></div>
     </section>
-
-    <script>
-      // Fungsi saat memilih foto
-      function gantiFoto(input) {
-        if (input.files && input.files[0]) {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            const base64 = e.target.result;
-            document.getElementById("preview").src = base64;
-            localStorage.setItem("fotoProfil", base64); // Simpan ke localStorage
-          };
-          reader.readAsDataURL(input.files[0]);
-        }
-      }
-
-      // Saat halaman dimuat kembali, ambil foto dari localStorage
-      window.addEventListener("DOMContentLoaded", function () {
-        const saved = localStorage.getItem("fotoProfil");
-        if (saved) {
-          document.getElementById("preview").src = saved;
-        }
-      });
-    </script>
   </body>
 </html>

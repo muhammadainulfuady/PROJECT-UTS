@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom right, #36aeea, #e6f2fa);
+  background-color: #d7dcdf;
 }
 
 /* login */
@@ -100,109 +100,11 @@ button.reset:hover {
   background-color: #c0392b;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .button-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* akun */
-/* .navbar {
-  background-color: #00808057;
-  max-width: 100%;
-  padding: 0.5rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 1rem;
-}
-
-.navbar img {
-  width: 50px;
-  border-radius: 50%;
-}
-
-.navbar h3 {
-  color: white;
-}
-
-.main {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 3rem;
-  margin: 2rem 1.5rem;
-  background-color: #dfd9d9;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin: 5rem auto;
-  max-width: 900px;
-}
-.card {
-  background-color: #cacacae0;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: 400px;
-  flex-wrap: wrap;
-}
-
-.card i {
-  color: #00000084;
-}
-
-.card h3 {
-  text-align: center;
-}
-
-.card img {
-  display: block;
-  margin: 0 auto;
-  object-fit: cover;
-  margin-top: 1rem;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-.identity {
-  padding: 20px;
-  line-height: 2rem;
-  width: 300px;
-  font-family: Arial, sans-serif;
-}
-
-.identity h3 {
-  text-align: center;
-  background-color: #2980b9;
-  border-radius: 3rem;
-}
-
-.row {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.label {
-  width: 100px;
-  font-weight: bold;
-}
-
-.value {
-  flex: 1;
-} */
-
+/* Akun */
 /* Navbar */
 .navbar {
-  background-color: #008080a1;
+  background-color: #67aeff;
   padding: 0.8rem 1.5rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -221,20 +123,19 @@ button.reset:hover {
   font-size: 1.2rem;
 }
 
+/* main content di tengah2 */
 .main {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   gap: 3rem;
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
   margin: 5rem auto;
-  max-width: 900px;
+  max-width: 60%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Card untuk foto */
+/* Card untuk background foto  */
 .card {
   background-color: #f0f4f7;
   padding: 1rem;
@@ -264,7 +165,7 @@ button.reset:hover {
   border: 4px solid #2980b9;
 }
 
-/* Identitas user */
+/* Identitas dari user */
 .identity {
   padding: 1rem;
   width: 320px;
@@ -281,10 +182,9 @@ button.reset:hover {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Baris data */
 .row {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   padding: 0.5rem 0;
   border-bottom: 1px solid #ccc;
 }
@@ -299,17 +199,33 @@ button.reset:hover {
   width: 100px;
 }
 
-.value {
-  color: #555;
-  flex: 1;
-}
-
 .footer {
-  background-color: #40f3e43e;
+  background-color: #10e7ff;
   padding: 1rem;
+  height: 4.3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer h5 {
   text-align: center;
   color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 1029px) {
+  .main {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
