@@ -99,30 +99,26 @@ button.reset3 {
 button.reset3:hover {
   background-color: #c0392b;
 }
+.pilih {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pilih p {
+  font-weight: bold;
+  color: #333;
+}
+
+.pilih select {
+  border: none;
+  font-weight: bold;
+  font-style: italic;
+  color: #219150;
+}
 
 /* Akun */
-/* Navbar */
-.navbar3 {
-  background-color: #67aeff;
-  padding: 0.8rem 1.5rem;
-}
-
-.logo3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar3 img {
-  width: 50px;
-  border-radius: 50%;
-}
-
-.navbar3 h3 {
-  color: white;
-  font-size: 1.2rem;
-}
-
 /* main content di tengah2 */
 .main3 {
   display: flex;
@@ -130,46 +126,34 @@ button.reset3:hover {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
-  margin: 5rem auto;
-  max-width: 60%;
+  max-width: 80%;
+  margin: 2rem auto;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Card untuk background foto  */
 .card3 {
   background-color: #f0f4f7;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 1rem;
-  width: 380px;
+  width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.card3 h3 {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.card3 i {
-  color: #2980b9;
-  margin-left: 0.5rem;
-  cursor: pointer;
-}
-
 .card3 img {
-  margin-top: 1rem;
   border-radius: 50%;
   width: 160px;
   height: 160px;
-  object-fit: cover;
   border: 4px solid #2980b9;
+  margin-bottom: 1rem;
 }
 
-/* Identitas dari user */
 .identity3 {
   padding: 1rem;
-  width: 320px;
   font-size: 1rem;
+  text-align: left;
 }
 
 .identity3 h3 {
@@ -178,7 +162,7 @@ button.reset3:hover {
   color: white;
   border-radius: 3rem;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -187,45 +171,169 @@ button.reset3:hover {
   align-items: center;
   padding: 0.5rem 0;
   border-bottom: 1px solid #ccc;
+  gap: 1rem;
 }
 
-.row3:last-child {
-  border-bottom: none;
+.row3 input {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 .label3 {
   font-weight: 600;
   color: #333;
-  width: 100px;
+  width: 120px;
 }
 
-.footer3 {
-  background-color: #10e7ff;
-  padding: 1rem;
-  height: 4.3rem;
-  text-align: center;
+.submit3 {
+  margin-top: 1.5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.footer3 h5 {
-  text-align: center;
+.submit3 button {
+  flex: 1;
+  border-radius: 1rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #f44336;
+  color: white;
+}
+
+.ganti-pw3 {
+  margin-top: 1rem;
+}
+
+.ganti-pw3 button {
   color: #2980b9;
+  font-weight: bold;
+  border: none;
 }
 
-/* Responsive */
-@media (max-width: 1029px) {
-  .main3 {
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 80%;
-  }
+.ganti-pw3 button:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
+/* popup */
+.popup3 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 90%;
+  max-width: 400px;
+}
+
+.tidak {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.tidak h1 {
+  font-size: 16px;
+  color: #ff4d4f;
+  cursor: pointer;
+  margin: 0;
+}
+
+.tidak h1:hover {
+  text-decoration: underline;
+}
+
+.inp-pw {
+  margin-bottom: 20px;
+}
+
+.inp-pw label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.inp-pw [type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.inp-pw [type="password"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.inp-pw button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inp-pw button[type="submit"]:hover {
+  background-color: #357ab8;
+}
 @media (max-width: 480px) {
-  .button-group3 {
+  .row3 {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
   }
+
+  .label3 {
+    width: 100%;
+  }
+
+  .submit3 {
+    flex-direction: column;
+  }
+}
+
+/* pelanggan */
+
+.pelanggan3 h1 {
+  text-align: center;
+}
+
+.pelanggan3 .main-pelanggan3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  background-color: #f8f7f7;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.main-pelanggan3 i {
+  font-size: 1.5rem;
 }

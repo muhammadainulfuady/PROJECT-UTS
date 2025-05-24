@@ -12,50 +12,67 @@
   </head>
   <body>
     <section class="akun-utama3">
-      <div class="navbar3">
-        <div class="logo3">
-          <h3>
-            Selamat datang di akun anda
-            <i class="fa fa-user" aria-hidden="true"></i>
-          </h3>
-          <img src="../Asset/IMG/3AkunImg/user.png" alt="" />
-        </div>
-      </div>
-
       <div class="main3">
         <div class="card3">
-          <h3>
-            Return Photo
-            <a href="#">
-              <i class="fa fa-camera" aria-hidden="true"></i>
-            </a>
-          </h3>
-          <img src="../Asset/IMG/3AkunImg/user.png" alt="Foto Profil" />
-        </div>
-        <div class="identity3">
-          <h3>Identitas Admin</h3>
-          <div class="row3">
-            <span class="label3">Nama lengkap</span>
-            <span class="value3">nlA--</span>
-          </div>
+          <img src="../Asset/IMG/3AkunImg/user2.png" alt="Foto Profil" />
+          <div class="identity3">
+            <h3>Identitas Profile</h3>
+            <div class="row3">
+              <span class="label3">Nama Lengkap</span>
+              <input
+                type="text"
+                name="nama"
+                placeholder="Masukkan nama lengkap"
+              />
+            </div>
 
-          <div class="row3">
-            <span class="label3">Gmail</span>
-            <span class="value3">gA--</span>
-          </div>
+            <div class="row3">
+              <span class="label3">Gmail</span>
+              <input type="email" name="gmail" placeholder="contoh@gmail.com" />
+            </div>
 
-          <div class="row3">
-            <span class="label3">Nomer wa</span>
-            <span class="value3">nwA--</span>
-          </div>
+            <div class="row3">
+              <span class="label3">Nomor WA</span>
+              <input type="text" name="wa" placeholder="08xxxxxxx" />
+            </div>
 
-          <div class="row3">
-            <span class="label3">Alamat</span>
-            <span class="value3">alA--</span>
+            <div class="row3">
+              <span class="label3">Alamat</span>
+              <input
+                type="text"
+                name="alamat"
+                placeholder="Masukkan alamat lengkap"
+              />
+            </div>
+            <div class="submit3">
+              <button type="submit" class="btn-submit">Submit</button>
+              <button type="reset" class="btn-reset">Reset</button>
+            </div>
+            <div class="ganti-pw3">
+              <button onclick="ketikaClick()">Ganti password</button>
+            </div>
+          </div>
+          <div class="popup3">
+            <div class="tidak">
+              <h1 onclick="closed()">Tutup</h1>
+            </div>
+            <form action="#" method="get">
+              <div class="inp-pw">
+                <label for="pw1">Password lama</label>
+                <input type="password" name="pw1" id="pw1" />
+              </div>
+              <div class="inp-pw">
+                <label for="pw2">Username baru</label>
+                <input type="password" name="pw2" id="pw2" />
+              </div>
+              <div class="inp-pw">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-      <div class="footer3"><h5>Dibuat tanggal 18 Mei 2025</h5></div>
     </section>
+    <script src="../Asset/JS/3Akun.js"></script>
   </body>
 </html>
